@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Laajenna — Rakennamme verkkosivuja ja digitaalisia ratkaisuja suomalaisille yrityksille." />
+  <meta name="theme-color" content="#080C10" />
+  <title>Laajenna — Digitaalinen Kasvu</title>
+
+  <link rel="canonical" href="https://laajenna.fi/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fi_FI" />
+  <meta property="og:site_name" content="Laajenna" />
+  <meta property="og:title" content="Laajenna — Digitaalinen Kasvu" />
+  <meta property="og:description" content="Rakennamme verkkosivuja ja digitaalisia ratkaisuja suomalaisille yrityksille, jotka haluavat kasvaa ja erottua verkossa." />
+  <meta property="og:url" content="https://laajenna.fi/" />
+  <meta property="og:image" content="https://laajenna.fi/og-image.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Laajenna — Digitaalinen Kasvu" />
+  <meta name="twitter:description" content="Verkkosivuja ja digitaalisia ratkaisuja suomalaisille yrityksille." />
+  <meta name="twitter:image" content="https://laajenna.fi/og-image.png" />
+
+  <!-- Favicon — inline SVG, electric blue L mark -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080C10'/%3E%3Cpath d='M20 16v32h24' stroke='%233B82F6' stroke-width='6' stroke-linecap='square' fill='none'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080C10'/%3E%3Cpath d='M20 16v32h24' stroke='%233B82F6' stroke-width='6' stroke-linecap='square' fill='none'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Bricolage Grotesque: editorial display, optical-size aware. DM Sans: refined body. -->
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+
+
+  <!-- JSON-LD: ProfessionalService schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Laajenna",
+    "description": "Verkkosivuja ja digitaalisia ratkaisuja suomalaisille yrityksille.",
+    "url": "https://laajenna.fi/",
+    "email": "hei@laajenna.fi",
+    "areaServed": "FI",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Helsinki",
+      "addressCountry": "FI"
+    },
+    "foundingDate": "2022"
+  }
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Siirry pääsisältöön</a>
+
+  <!-- ── Scroll Progress Bar ───────────────────────────── -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ── Navigation ────────────────────────────────────── -->
+  <nav class="nav" id="nav" aria-label="Päävalikko">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Laajenna</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#palvelut">Palvelut</a>
+        <a href="#projektit">Projektit</a>
+        <a href="#meista">Meistä</a>
+        <a href="#yhteystiedot" class="nav-cta">Ota yhteyttä</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Valikko" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ── Hero ──────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-blob" id="heroBlob" aria-hidden="true"></div>
+    <div class="hero-noise" aria-hidden="true"></div>
+    <!-- Giant watermark — decorative, aria-hidden -->
+    <div class="hero-wordmark" aria-hidden="true">LAAJENNA</div>
+
+    <div class="hero-inner">
+      <div class="availability-badge">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Vapaana uusille projekteille
+      </div>
+
+      <h1 class="hero-headline" id="heroHeadline">
+        <span class="word-wrap"><span class="word">Laajennetaan</span></span>
+        <span class="word-wrap"><span class="word">yrityksesi</span></span>
+        <span class="word-wrap"><span class="word accent-word">digitaalisesti.</span></span>
+      </h1>
+
+      <p class="hero-sub">
+        Rakennamme verkkosivuja ja digitaalisia ratkaisuja suomalaisille<br class="br-desk" />
+        yrityksille, jotka haluavat kasvaa ja erottua verkossa.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projektit" class="btn btn-primary">Katso projektit</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Selaa</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── Marquee ────────────────────────────────────────── -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-inner">
+      <span>Web Design</span><span class="dot">·</span>
+      <span>Kehitys</span><span class="dot">·</span>
+      <span>SEO</span><span class="dot">·</span>
+      <span>Framer</span><span class="dot">·</span>
+      <span>Next.js</span><span class="dot">·</span>
+      <span>Brändäys</span><span class="dot">·</span>
+      <span>UI/UX</span><span class="dot">·</span>
+      <span>Konversio-optimointi</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- ── Stats ──────────────────────────────────────────── -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num-row">
+            <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+          </div>
+          <p class="stat-label">Projektia toteutettu</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num-row">
+            <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+          </div>
+          <p class="stat-label">Tyytyväiset asiakkaat</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num-row">
+            <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+          </div>
+          <p class="stat-label">Vuotta kokemusta</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Services ───────────────────────────────────────── -->
+  <section class="services-section" id="palvelut">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <span class="section-tag">Palvelut</span>
+        </div>
+        <h2 class="section-title">Mitä teemme</h2>
+      </div>
+
+      <!-- Editorial numbered list — far more distinctive than a card grid -->
+      <div class="services-list">
+
+        <div class="service-row reveal-up" data-delay="0">
+          <span class="svc-num" aria-hidden="true">01</span>
+          <div class="svc-name">
+            <h3>Web Design</h3>
+            <p class="svc-desc">Visuaalisesti vaikuttavia verkkosivuja, jotka erottuvat kilpailijoista ja jäävät mieleen.</p>
+            <div class="svc-tags"><span>Figma</span><span>UI/UX</span><span>Wireframes</span></div>
+          </div>
+          <span class="svc-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1.5" y="3.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M1.5 7.5h17" stroke="currentColor" stroke-width="1.4"/><circle cx="4.5" cy="5.5" r=".75" fill="currentColor"/><circle cx="7" cy="5.5" r=".75" fill="currentColor"/></svg>
+          </span>
+        </div>
+
+        <div class="service-row reveal-up" data-delay="1">
+          <span class="svc-num" aria-hidden="true">02</span>
+          <div class="svc-name">
+            <h3>Kehitys</h3>
+            <p class="svc-desc">Nopeita, skaalautuvia verkkosovelluksia modernilla teknologialla — Next.js, React, Framer.</p>
+            <div class="svc-tags"><span>Next.js</span><span>React</span><span>Framer</span></div>
+          </div>
+          <span class="svc-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polyline points="6,7 2,10 6,13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="14,7 18,10 14,13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="5" x2="8" y2="15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+
+        <div class="service-row reveal-up" data-delay="2">
+          <span class="svc-num" aria-hidden="true">03</span>
+          <div class="svc-name">
+            <h3>SEO &amp; Kasvu</h3>
+            <p class="svc-desc">Orgaaninen näkyvyys hakukoneissa ja konversio-optimointi, joka muuttaa kävijät asiakkaiksi.</p>
+            <div class="svc-tags"><span>SEO</span><span>Analytics</span><span>CRO</span></div>
+          </div>
+          <span class="svc-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polyline points="2,14 7,9 11,12 18,5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="14,5 18,5 18,9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+
+        <div class="service-row reveal-up" data-delay="3">
+          <span class="svc-num" aria-hidden="true">04</span>
+          <div class="svc-name">
+            <h3>Brändäys</h3>
+            <p class="svc-desc">Yhtenäinen visuaalinen identiteetti — logo, värit, typografia — joka rakentaa luottamusta.</p>
+            <div class="svc-tags"><span>Logo</span><span>Typografia</span><span>Värit</span></div>
+          </div>
+          <span class="svc-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2 L12 8 L18 10 L12 12 L10 18 L8 12 L2 10 L8 8 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Portfolio ──────────────────────────────────────── -->
+  <section class="portfolio-section" id="projektit">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <span class="section-tag">Projektit</span>
+        </div>
+        <h2 class="section-title">Valitut työt</h2>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Large card: wcag-scan.com (featured) -->
+        <div class="portfolio-card portfolio-large reveal-up" data-delay="0">
+          <div class="portfolio-img">
+            <img src="img/wcag-scan.png" alt="WCAG Scan — saavutettavuusskannerin etusivu" loading="lazy" />
+          </div>
+          <div class="portfolio-label-top">
+            <span class="portfolio-cat">SaaS &amp; Saavutettavuustyökalu</span>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>WCAG Scan</h3>
+              <p>Automaattinen WCAG 2.x -tarkistustyökalu verkkosivuille</p>
+              <a href="https://wcag-scan.com" class="portfolio-link" target="_blank" rel="noopener" aria-label="wcag-scan.com (avautuu uudessa välilehdessä)">wcag-scan.com</a>
+            </div>
+          </div>
+          <span class="portfolio-year-badge">2026</span>
+        </div>
+
+        <!-- Small card: Ravintola Latokaski -->
+        <div class="portfolio-card reveal-up" data-delay="1">
+          <div class="portfolio-img">
+            <img src="img/ravintola.webp" alt="Ravintola Latokaski — ravintolan sisätila" loading="lazy" />
+          </div>
+          <div class="portfolio-label-top">
+            <span class="portfolio-cat">Ravintola &amp; Hallintajärjestelmä</span>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Ravintola Latokaski</h3>
+              <p>Verkkosivut, brändäys &amp; varausjärjestelmä</p>
+              <a href="https://ravintolalatokaski.fi" class="portfolio-link" target="_blank" rel="noopener" aria-label="ravintolalatokaski.fi (avautuu uudessa välilehdessä)">ravintolalatokaski.fi</a>
+            </div>
+          </div>
+          <span class="portfolio-year-badge">2026</span>
+        </div>
+
+        <!-- Small card: Urapolku -->
+        <div class="portfolio-card reveal-up" data-delay="2">
+          <div class="portfolio-img">
+            <img src="img/urapolku.png" alt="Urapolku Oy — verkkosovelluksen etusivu" loading="lazy" />
+          </div>
+          <div class="portfolio-label-top">
+            <span class="portfolio-cat">Koulutus &amp; Opetus</span>
+          </div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h3>Urapolku Oy</h3>
+              <p>Web app &amp; SEO-optimointi</p>
+              <a href="https://urapolku.fi" class="portfolio-link" target="_blank" rel="noopener" aria-label="urapolku.fi (avautuu uudessa välilehdessä)">urapolku.fi</a>
+            </div>
+          </div>
+          <span class="portfolio-year-badge">2026</span>
+        </div>
+
+        <!-- Full-width CTA card -->
+        <div class="portfolio-card portfolio-next reveal-up" data-delay="3">
+          <div class="portfolio-next-inner">
+            <span class="next-label">Seuraava projekti</span>
+            <p class="next-text">Onko yrityksesi valmis laajentumaan verkossa?</p>
+            <a href="#yhteystiedot" class="btn btn-primary">Aloitetaan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Testimonials ───────────────────────────────────── -->
+  <section class="tm-section" id="suositukset">
+    <div class="container">
+      <div class="tm-heading">
+        <div class="section-label">
+          <span class="section-tag">Suositukset</span>
+        </div>
+        <h2 class="section-title">Asiakkaat sanovat</h2>
+      </div>
+      <div class="tm-grid">
+
+        <div class="tm-card">
+          <svg class="tm-icon" width="26" height="20" viewBox="0 0 26 20" fill="currentColor" aria-hidden="true">
+            <path d="M0 20V11C0 4.1 4 .5 11.9 0l.9 2.2C8.7 3 6.5 5.3 6.3 9H11V20H0ZM15 20V11C15 4.1 19 .5 26.9 0l.9 2.2C23.7 3 21.5 5.3 21.3 9H26V20H15Z"/>
+          </svg>
+          <p class="tm-quote">Sivut tehtiin tarkasti aikataulussa ja lopputulos ylitti odotukset. Selkeä prosessi ja hyvä viestintä alusta loppuun.</p>
+          <div class="tm-footer">
+            <span class="tm-name">Henna Koivula</span>
+            <span class="tm-role">Toimitusjohtaja, Koivula &amp; Co</span>
+          </div>
+        </div>
+
+        <div class="tm-card">
+          <svg class="tm-icon" width="26" height="20" viewBox="0 0 26 20" fill="currentColor" aria-hidden="true">
+            <path d="M0 20V11C0 4.1 4 .5 11.9 0l.9 2.2C8.7 3 6.5 5.3 6.3 9H11V20H0ZM15 20V11C15 4.1 19 .5 26.9 0l.9 2.2C23.7 3 21.5 5.3 21.3 9H26V20H15Z"/>
+          </svg>
+          <p class="tm-quote">Yhteydenottojen määrä tuplaantui kuukauden sisällä julkaisusta. Investointi maksoi itsensä takaisin nopeasti.</p>
+          <div class="tm-footer">
+            <span class="tm-name">Joonas Virtanen</span>
+            <span class="tm-role">Perustaja, Virtanen Consulting</span>
+          </div>
+        </div>
+
+        <div class="tm-card">
+          <svg class="tm-icon" width="26" height="20" viewBox="0 0 26 20" fill="currentColor" aria-hidden="true">
+            <path d="M0 20V11C0 4.1 4 .5 11.9 0l.9 2.2C8.7 3 6.5 5.3 6.3 9H11V20H0ZM15 20V11C15 4.1 19 .5 26.9 0l.9 2.2C23.7 3 21.5 5.3 21.3 9H26V20H15Z"/>
+          </svg>
+          <p class="tm-quote">Harvinaisen hyvä yhdistelmä teknistä osaamista ja designsilmää. Suosittelen lämpimästi.</p>
+          <div class="tm-footer">
+            <span class="tm-name">Aino Mäkinen</span>
+            <span class="tm-role">Luova johtaja, Mäkinen Studio</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ──────────────────────────────────────────── -->
+  <section class="about-section" id="meista">
+    <div class="container">
+
+      <div class="about-header reveal-up">
+        <div class="section-label">
+          <span class="section-tag">Meistä</span>
+        </div>
+        <h2 class="about-headline">
+          Kokenut tiimi.<br>Mitattavia tuloksia.
+        </h2>
+      </div>
+
+      <div class="about-cols">
+        <div class="about-col reveal-up" data-delay="0">
+          <span class="about-col-num" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16 L8 4 L12 12 L15 8 L18 16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Räätälöity</h3>
+          <p>Ei valmismalleja. Jokainen projekti rakennetaan alusta, juuri sinulle ja liiketoimintasi tarpeisiin.</p>
+        </div>
+        <div class="about-col reveal-up" data-delay="1">
+          <span class="about-col-num" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polyline points="5,7 1,10 5,13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="15,7 19,10 15,13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><line x1="13" y1="5" x2="7" y2="15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Tekninen</h3>
+          <p>Next.js, React, Framer — moderni teknologia, joka skaalautuu kasvusi mukana ja pysyy nopeana.</p>
+        </div>
+        <div class="about-col reveal-up" data-delay="2">
+          <span class="about-col-num" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><line x1="2" y1="19" x2="18" y2="19" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><rect x="5" y="11" width="3" height="8" rx="1" stroke="currentColor" stroke-width="1.4"/><rect x="12" y="6" width="3" height="13" rx="1" stroke="currentColor" stroke-width="1.4"/></svg>
+          </span>
+          <h3>Mitattava</h3>
+          <p>Tulokset eivät ole sattumaa. Strateginen ote ja selkeät tavoitteet jokaiseen projektiin.</p>
+        </div>
+      </div>
+
+      <div class="about-footer reveal-up">
+        <p class="about-sig">Laajenna — Helsinki, perustettu 2026</p>
+        <div class="about-pills">
+          <span class="about-pill">3+ vuotta kokemusta</span>
+          <span class="about-pill">5+ projektia</span>
+          <span class="about-pill">Helsinki, Suomi</span> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ────────────────────────────────────────────── -->
+  <section class="faq-section" id="ukk">
+    <div class="container">
+      <div class="faq-layout">
+        <div class="faq-aside reveal-up">
+          <div class="section-label">
+            <span class="section-tag">UKK</span>
+          </div>
+          <h2 class="section-title">Usein kysyttyä</h2>
+          <p class="faq-aside-sub">Vastaukset yleisimpiin kysymyksiin. Löydätkö jotain muuta? <a href="#yhteystiedot">Kysy suoraan</a>.</p>
+        </div>
+
+        <div class="faq-list reveal-up">
+          <details class="faq-item">
+            <summary>
+              <span>Paljonko verkkosivuprojekti maksaa?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Pienemmät esittelysivut alkavat noin 2 500 € hintaluokasta. Laajemmat verkkokaupat ja räätälöidyt sovellukset 8 000–20 000 €. Annamme aina kiinteän tarjouksen ennen aloitusta.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Kuinka kauan projekti kestää?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Tyypillinen verkkosivuprojekti kestää 4–8 viikkoa. Aikataulu sovitaan tarkasti aloituspalaverissa ja seurataan viikoittain.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Käytättekö Framer vai koodaatte itse?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Kumpaakin — valinta tehdään projektin tarpeiden mukaan. Framer sopii nopeaan brändisivuun, Next.js / React vaativampiin verkkosovelluksiin.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Saanko sivut omaan hallintaani?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Kyllä. Sivujen hallinta, domain ja kaikki sisältö ovat aina sinun nimissäsi. Et ole sidottu meihin julkaisun jälkeen.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Tarjoatteko ylläpitoa julkaisun jälkeen?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>Tarjoamme jatkuvaa ylläpitoa ja kehitystä kuukausisopimuksella. Voit myös tilata päivityksiä yksittäisinä toimeksiantoina.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <section class="cta-section" id="yhteystiedot">
+    <div class="cta-glow"></div>
+    <div class="container">
+      <div class="cta-inner reveal-up">
+        <h2 class="cta-headline">Aloitetaan</h2>
+        <div class="section-label cta-label">
+          <span class="section-tag">Ota yhteyttä</span>
+        </div>
+        <p class="cta-question">Onko yrityksesi valmis laajentumaan verkossa?</p>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Nimi</label>
+              <input type="text" id="contactName" name="name" placeholder="Matti Meikäläinen" autocomplete="name" aria-describedby="formStatus" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Sähköposti</label>
+              <input type="email" id="contactEmail" name="email" placeholder="matti@yritys.fi" autocomplete="email" aria-describedby="formStatus" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Viesti</label>
+            <textarea id="contactMessage" name="message" placeholder="Kerro projektistasi..." rows="4" aria-describedby="formStatus" required></textarea>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary" id="formSubmit">
+              <span class="submit-label">Lähetä viesti</span>
+              <span class="submit-spinner" aria-hidden="true"></span>
+            </button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <nav class="footer-links" aria-label="Alatunniste">
+          <a href="#palvelut">Palvelut</a>
+          <a href="#projektit">Projektit</a>
+          <a href="#meista">Meistä</a>
+        </nav>
+        <span class="footer-time" id="footerTime" aria-live="off"></span>
+        <p class="footer-copy">© 2026 Laajenna</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
