@@ -11,7 +11,16 @@ export const handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ error: "Method not allowed" }),
+    };
+  }
+
+  if (!process.env.RESEND_API_KEY) {
+    return {
+      statusCode: 500,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ error: "RESEND_API_KEY is not configured." }),
     };
   }
 
@@ -21,6 +30,7 @@ export const handler = async (event) => {
   } catch {
     return {
       statusCode: 400,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ error: "Invalid JSON" }),
     };
   }
@@ -30,6 +40,7 @@ export const handler = async (event) => {
   if (!name?.trim() || !email?.trim() || !message?.trim()) {
     return {
       statusCode: 400,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ error: "Kaikki kentät ovat pakollisia." }),
     };
   }
@@ -37,6 +48,7 @@ export const handler = async (event) => {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return {
       statusCode: 400,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ error: "Tarkista sähköpostiosoite." }),
     };
   }
@@ -44,6 +56,9 @@ export const handler = async (event) => {
   const safeName = escHtml(name);
   const safeEmail = escHtml(email);
   const safeMessage = escHtml(message);
+  const from =
+    process.env.RESEND_FROM_EMAIL || "Laajenna <onboarding@resend.dev>";
+  const to = process.env.RESEND_TO_EMAIL || "hei@laajenna.fi";
 
   try {
     const response = await fetch("https://api.resend.com/emails", {
@@ -53,9 +68,9 @@ export const handler = async (event) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Laajenna <onboarding@resend.dev>",
-        to: "hei@laajenna.fi",
-        reply_to: email,
+        from,
+        to,
+        replyTo: email,
         subject: `Uusi yhteydenotto — ${safeName}`,
         html: `
           <h2 style="font-family:sans-serif">Uusi yhteydenotto</h2>
@@ -68,22 +83,42 @@ export const handler = async (event) => {
     });
 
     if (!response.ok) {
-      const err = await response.json();
-      console.error("Resend error:", err);
+      const errorText = await response.text();
+      let errorBody = errorText;
+
+      try {
+        errorBody = JSON.parse(errorText);
+      } catch {
+        // Keep the plain text body when Resend does not return JSON.
+      }
+
+      console.error("Resend error:", {
+        status: response.status,
+        statusText: response.statusText,
+        errorBody,
+      });
       return {
-        statusCode: 500,
-        body: JSON.stringify({ error: "Viestin lähetys epäonnistui." }),
+        statusCode: response.status,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          error:
+            errorBody?.message ||
+            errorBody?.error ||
+            "Viestin lähetys epäonnistui.",
+        }),
       };
     }
 
     return {
       statusCode: 200,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ success: true }),
     };
   } catch (err) {
     console.error("Contact handler error:", err);
     return {
       statusCode: 500,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ error: "Palvelinvirhe." }),
     };
   }
