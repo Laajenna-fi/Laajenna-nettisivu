@@ -25,6 +25,7 @@ export default async function handler(req, res) {
   const safeName    = escHtml(name);
   const safeEmail   = escHtml(email);
   const safeMessage = escHtml(message);
+  const from = 'hei@laajenna.fi';
 
   try {
     const response = await fetch('https://api.resend.com/emails', {
@@ -35,7 +36,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         // Change to noreply@laajenna.fi once domain is verified in Resend dashboard
-        from: 'Laajenna <onboarding@resend.dev>',
+        from: from,
         to: 'hei@laajenna.fi',
         reply_to: email,
         subject: `Uusi yhteydenotto — ${safeName}`,

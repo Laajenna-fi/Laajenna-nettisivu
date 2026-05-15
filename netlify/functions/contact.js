@@ -56,8 +56,7 @@ export const handler = async (event) => {
   const safeName = escHtml(name);
   const safeEmail = escHtml(email);
   const safeMessage = escHtml(message);
-  const from =
-    process.env.RESEND_FROM_EMAIL || "Laajenna <onboarding@resend.dev>";
+  const from = process.env.RESEND_FROM_EMAIL || "hei@laajenna.fi";
   const to = process.env.RESEND_TO_EMAIL || "hei@laajenna.fi";
 
   try {
@@ -70,7 +69,7 @@ export const handler = async (event) => {
       body: JSON.stringify({
         from,
         to,
-        replyTo: email,
+        reply_to: email,
         subject: `Uusi yhteydenotto — ${safeName}`,
         html: `
           <h2 style="font-family:sans-serif">Uusi yhteydenotto</h2>
